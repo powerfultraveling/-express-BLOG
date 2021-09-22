@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../template/head") %> 
+    <link rel="stylesheet" href="css/signUp_style.css">
+</head>
+<body>
+    <%- include("../template/nav") %> 
+    <section class="section">
+        <h1 class="section_title">Log In</h1>
+        <div class="section_par">
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </p>
+        </div>
+        <form class="section_form" method="POST" action="/login">
+            <div>
+                <label><b>Username:</b></label>
+                <br>
+                <input class="section_input" type="text" name="login_username">
+            </div>
+            <div class="form_password">
+                <label><b>password:</b></label>
+                <br>
+                <input class="section_input" type="password" name="login_password">
+            </div>
+            <button class="section_btn" type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>

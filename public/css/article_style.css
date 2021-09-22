@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(243, 243, 243);
+}
+
+pre{
+    background-color: rgb(228, 228, 228);
+    padding: 40px;
+}
+
+
+.section{
+    margin: 100px auto;
+    width: 700px;
+    line-height: 180%;
+}
+
+.section div h1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.section div h2{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.article_title{
+    line-height: 150%;
+    font-size: 40px;
+}
+
+.article_func{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.edit_btn{
+    margin-right: 10px;
+    color:rgb(174, 175, 174);
+}
+
+.edit_btn:hover{
+    color:rgb(72, 73, 72);
+}
+
+.delete_btn{
+    color:rgb(174, 175, 174);
+}
+
+.delete_btn:hover{
+    color:rgb(72, 73, 72);
+}
+
+.para{
+    font-size: 20;
+}
+

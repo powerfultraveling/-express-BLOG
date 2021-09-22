@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../template/head")  %> 
+    <link rel="stylesheet" type="text/css" href="/css/user_page.css">
+</head>
+<body>
+<nav class="nav">
+    <div class="nav_title">
+        <h1 class="nav_title_header"><a href="/">CodeNote</a></h1>
+    </div>
+    <div class="nav_option">
+        <ul class="nav_ul">
+        <li class="nav_item">
+            <% if(username || userId) { %>     
+            <a href="/write">write</a>
+            <a href="/logout">Log Out</a>
+            <a href="/user/<% userId %>"" class="nav_profile"><%= username[0] %> </a>
+            <% } else { %>
+            <a href="/login">Log In</a>
+            <a href="/register">Sign Up</a>
+            <% } %>  
+        </li>
+        </ul>
+    </div>
+    </nav>
+    <section class="section">
+        <div class="user_options">
+            <h1>Options</h1>
+            <ul>
+                <li class="article"><a href="/user">articles</a></li>
+                <li class="profile"><a href="/profile">profile</a></li>
+            </ul>
+        </div>
+        <div class="user_articles">
+            <h1>Your Articles</h1>
+            <% article.forEach((element)=> { %>
+            <div class="user_article_card">
+                <h1 class="user_card_title"><a href="#"><%= element.title %></a></h1>
+                <div class="user_card_details">
+                    <p class="user_card_date"><%= element.createdAt %> </p>  
+                    <div>
+                        <a href="/edit/<% element.id %> ">Edit</a>
+                        <a href="/delete/<% element.id %> ">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <% }) %>    
+        </div>
+    </section>
+    <%- include("../template/footer") %> 
+</body>
+</html>

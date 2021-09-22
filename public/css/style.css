@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+a{
+  text-decoration: none;
+  text-decoration-color: none;
+  color: black;
+}
+
+
+
+a:visited{
+  color: black;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: #eaf2fa;
+  height: 100px;
+  padding: 30px;
+  border-bottom: solid 1px black;
+}
+.nav .nav_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .nav_title .nav_title_header {
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.nav .nav_ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+.nav .nav_ul li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+.nav .nav_ul a {
+  text-decoration: none;
+  margin-right: 15px;
+  color: black;
+}
+.nav .nav_ul a:hover {
+  color: rgb(173, 222, 250);
+}
+.nav_profile{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(110, 158, 160);
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.welcome_page {
+  background-image: url("../img/section2.png");
+  background-position: center;
+  height: 400px;
+  padding: 30px;
+}
+.welcome_page h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.welcome_page p {
+  font-size: 16px;
+}
+.welcome_page button {
+  font-size: 16px;
+  width: 100px;
+  padding: 5px 15px;
+  border: solid 1px black;
+  border-radius: 20px;
+  position: relative;
+  left: 360px;
+  top: 40px;
+  cursor: pointer;
+}
+.welcome_page button:hover {
+  background-color: #fff;
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+
+.top {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px;
+  border: solid 1px black;
+}
+.top .card {
+  width: 400px;
+  height: 120px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.top .card .card_title {
+  font-size: 20px;
+}
+.top .card .card_des {
+  font-size: 14px;
+  color: #a09e9e;
+}
+.top .card .card_date {
+  font-size: 14px;
+  color: #a09e9e;
+  margin-top: 7px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 40px;
+  background-color: #f8f8f8;
+  color: black;
+}
+.footer h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.footer span {
+  font-size: 10px;
+  margin-right: 20px;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.edit_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+.publish_btn {
+  background-color: #badaf8;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+  font-weight: 600 ;
+}
+.edit_nav .publish_btn_sec {
+  background-color: #a2d1fc;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.edit_form {
+  display: flex;
+  justify-content: center;
+}
+.edit_form .textarea {
+  width: 700px;
+}
+
+/*# sourceMappingURL=style.css.map */

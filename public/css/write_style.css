@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: 40px auto;
+}
+
+.edit{
+    display: flex;
+
+}
+
+.markdown{
+    width: 50%;
+    height: 500px;
+    background-color: rgb(235, 235, 235);
+}
+
+.title{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(235, 235, 235);
+    border: none;
+    border-bottom: solid 1px white;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.textarea{
+    margin-right: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 450px;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: rgb(235, 235, 235);
+}
+
+.preview{
+    padding: 10px;
+    width: 50%;
+    height: 500px;
+    overflow: scroll;
+}
+
+.submit_div{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.publish_btn{
+    margin-top: 20px;
+    cursor: pointer;
+}

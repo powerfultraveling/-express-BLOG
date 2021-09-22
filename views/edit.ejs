@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/write_style.css">
+</head>
+<body>
+    <%- include("./template/nav") %> 
+    <form class="form" action="/write" method="POST">
+        <div class="edit">
+            <div class="markdown">
+                <input type="text" class="title"  name="title" placeholder="your title...." value=<%= title %> > 
+                <br>
+                <textarea class="textarea" id="pad" name="content"><%= content %> </textarea>
+            </div>
+            <div class="preview" id="markdown"></div>
+        </div>
+        <div class="submit_div">
+            <input type="submit" class="publish_btn" value="publish">
+        </div>
+    </form>
+    <script src="/script/bundle.js"></script>
+</body>
+</html>

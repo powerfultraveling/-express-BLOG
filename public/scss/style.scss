@@ -1,0 +1,161 @@
+$georgea: Georgia, 'Times New Roman', Times, serif;
+$grey: rgb(160, 158, 158);
+$blue: rgb(186, 218, 248);
+$blue_sec: rgb(162, 209, 252);
+
+@mixin flex_split{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: $georgea;
+}
+
+.nav{
+    @include flex_split;
+    background-color: $blue;
+    height: 100px;
+    padding: 30px;
+    border-bottom: solid 1px black;
+    .nav_title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav_title_header{
+            font-size: 40px;
+            font-family: $georgea;
+        }
+    }
+    .nav_ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        li{
+            list-style-type: none ;
+        }
+        a{
+            text-decoration: none;
+            margin-right: 15px;
+            color: black;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+} 
+
+.welcome_page{
+    background-image: url("img/section2.png");
+    background-position: center;
+    height: 400px;
+    padding: 30px;
+    h1{
+        font-family: $georgea;
+        font-size: 50px;
+    }
+    p{
+        font-size: 16px;
+    }
+    button{
+        font-size: 16px;
+        width: 100px;
+        padding: 5px 15px;
+        border: solid 1px black;
+        border-radius: 20px;
+        position: relative;
+        left: 360px;
+        top: 40px;
+        cursor: pointer;
+        &:hover{
+            background-color: #fff;
+        }
+    }
+}
+
+.top{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 40px;
+    border: solid 1px black;
+    .card{
+        width: 400px;
+        height: 120px;
+        padding: 10px;
+        margin-bottom: 10px;
+        .card_title{
+            font-size: 20px;
+        }
+        .card_des{
+            font-size: 14px;
+            color: $grey;
+        }
+        .card_date{
+            font-size: 14px;
+            color: $grey;
+            margin-top: 7px;
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 40px;
+    background-color: rgb(231, 231, 231);
+    color: black;
+    h1{
+        font-family: $georgea;
+    }
+    span{
+        font-size: 10px;
+        margin-right: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+//edit.html
+.edit_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 140px 20px 140px;
+
+    .publish_btn{
+        background-color: $blue;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+    }
+    .publish_btn_sec{
+        background-color: $blue_sec;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+    }
+}
+
+.edit_form{
+    display: flex;
+    justify-content: center;
+    .textarea{
+        width: 700px;
+    }
+}

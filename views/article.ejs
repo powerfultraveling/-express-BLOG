@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./template/head") %> 
+    <link rel="stylesheet" href="/css/article_style.css">
+</head>
+<body>
+    <%- include("./template/nav2") %> 
+    <section class="section">
+        <h1 class="article_title"><%= title  %> </h1>
+        <div class="article_func">
+            <div>
+                <span><%= username %> </span>
+                <span><%= time  %> </span>
+            </div>
+            <% if(userId === useId) { %> 
+                <div>
+                    <a class="edit_btn" href="/edit/<%= id %>"><b>Edit</b></a>
+                    <a class="delete_btn" href="/delete/<%= id %>"><b>Delete</b></a>
+                </div>
+            <% } %> 
+        </div>
+        <div class="para"><%- article  %></p></div>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <script>
+            const pre = document.querySelector("pre");
+            pre.classList.add("prettyprint");
+            pre.classList.add("linenums:1");
+        </script>
+    </section>
+</body>
+</html>

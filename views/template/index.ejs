@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CodeNote</title>
+  <meta name="description" content="My Page Description">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav_title">
+      <h1 class="nav_title_header"><a href="/">CodeNote</a></h1>
+    </div>
+    <div class="nav_option">
+      <ul class="nav_ul">
+        <li class="nav_item">
+          <a href="">articles</a>
+          <% if(username || userId) { %> 
+            <a href="/write">write</a>
+            <a href="/logout">Log Out</a>
+            <a href="/user/<% userId %>"" class="nav_profile"><%= username[0] %> </a>
+          <% } else { %>
+            <a href="/login">Log In</a>
+            <a href="/register">Sign Up</a>
+          <% } %>  
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section class="welcome_page">
+    <div>
+      <h1>CodeNote is a place<br> 
+        to write, read, and<br>
+        connect</h1>
+      <p>It's easy and free to post your thinking on any topic and<br>
+         connect with millions of readers.</p>
+      <button><a href="/edit">write</a></button>
+    </div>
+  </section>
+  <section class="top">  
+    <div class="box">
+      <% for(let i = 0; i<4; i++) { %>
+        <% if(result[i]) { %> 
+          <div class="card">
+            <h1 class="card_title"><a href="/article/<%= result[i].id %> "><%=  result[i].title %></a></h1>
+            <p class="card_date"><%= result[i].createdAt %></p>
+          </div>
+        <% } %>   
+      <% } %>  
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer_title">
+      <h1>CodeNote</h1>
+    </div>
+    <div>
+      <span><a href="">About</a></span>
+      <span><a href="">Terms</a></span>
+      <span><a href="">Privacy</a></span>
+    </div>
+  </footer>
+</body>
+</html>
